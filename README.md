@@ -1,6 +1,6 @@
 ## Sketchify
 Checkout Live https://sketchify.pythonanywhere.com/
-![Video of the site](https://github.com/naazweb/sketchify/tree/dev/sample.gif?raw=true)
+![Video of the site](https://github.com/naazweb/sketchify/blob/main/sample.gif?raw=true)
 
 ### Description
 This web app is build with Django - Python Web Framework. It converts images into pencil sketch uisng OpenCV library. 
