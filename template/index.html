@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+    img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .box {
+        border: 1px solid rgb(10, 9, 10);
+        padding: 5px;
+        margin: 5px;
+    }
+</style>
+<script>
+    function updateTextInput(val) {
+        document.getElementById('textInput').innerText = val;
+    }
+</script>
+{% endblock %}
+{% block title %}Sketchify{% endblock %}
+{% block header %}
+<center>
+    <h1>Sketchify</h1>
+    <br />Convert your images to sketch in a moment!
+</center>
+
+<br>
+
+{% endblock %}
+{% block body %}
+
+<center>
+    <div class="row">
+        <div class="col-sm-12">
+            <center>
+                <h5>Upload an image</h5>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div id="textInput"></div>
+                    <button type="submit" class="btn btn-dark" style="font-size: medium;">Create Sketch</button>
+
+                </form>
+            </center>
+        </div>
+    </div>
+</center><br>
+<div class="row ">
+    {%if images%}
+
+    <div class="col-sm-12">
+        <h6>*Click on Image to Download</h6>
+
+        <div class="row box">
+            <div class="col-sm-6">
+                <h6>Original</h6>
+                <img src="{{ images.original_img.url }}" alt="Your Image will come here">
+            </div>
+            <div class="col-sm-6">
+                <h6>Sketch</h6>
+                <a href="{{ images.converted_img.url }}" download>
+                    <img src="{{ images.converted_img.url }}" alt="Converted Image will come here">
+                    <button>Download Sketch</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    {%else%}
+
+    {%endif%}
+</div>
+
+{% endblock %}
+{% block custom_js %}
+{% endblock %}

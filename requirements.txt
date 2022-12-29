@@ -1,0 +1,9 @@
+asgiref==3.2.10
+Django==3.1.1
+django-range-slider==0.2.4
+numpy==1.19.1
+opencv-python-headless==4.4.0.42
+Pillow==7.2.0
+pytz==2020.1
+sqlparse==0.3.1
+gunicorn
