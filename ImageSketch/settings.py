@@ -25,7 +25,7 @@ SECRET_KEY = '&b+pnk&d^at$*7c$kugw(twcn^fjy(pq#9fhmsna-zk0ne=&*_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','image-sketch.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','sketchify.pythonanywhere.com']
 
 
 # Application definition
